@@ -1,0 +1,20 @@
+$whiteColor: #FEFFFF;
+$bodyBG: #FFFFFF;
+$headerBG: url('../img/m-h-day.jpg') no-repeat center top / cover;
+$headerColor: #2C2F3C;
+$textColor: rgba(196, 196, 196, 0.904);
+$textBG: #14A0C7;
+$buttonBG: #699900;
+$cardAndFooterBG: #21232E;
+$gradient: linear-gradient(90deg, #649411, #2D5BD7);
+$widthFooterText: 230px;
+$logoLetterSpacing: 0.01em;
+$fontFresca: 'Fresca', sans-serif;
+$SourceSansPro: 'Source Sans Pro', sans-serif;
+$z-layers: (
+  negative: -1,
+  zero: 0,
+  default: 1,
+  dropdown: 2,
+  overlay: 3,
+);
