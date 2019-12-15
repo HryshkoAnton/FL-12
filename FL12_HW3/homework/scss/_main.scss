@@ -58,7 +58,7 @@ body {
 }
 
 .header-wrap {
-    width: 33%;
+    width: 400px;
     padding-left: 90px;
 
     .header_heading {
@@ -106,6 +106,9 @@ body {
     text-align: center;
     
     .section_text {
+        width: 350px;
+        margin: 0 auto;
+        margin-top: 27px;
         color: $headerColor;
         font-size: 28px;
         font-weight: 600;
@@ -118,7 +121,7 @@ body {
             height: 32px;
             background-color: $textBG;
             position: absolute;
-            left: 680px;
+            left: 179px;
             bottom: 6px;
             z-index: z(negative);
         }

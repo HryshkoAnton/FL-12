@@ -5,7 +5,7 @@ body {
   background-color: #FFFFFF !important; }
 
 .header {
-  background: url("../img/m-h-day.jpg") no-repeat center top/cover;
+  background: url("../img/m-h-day.jpg") no-repeat 80% 50%/cover;
   border-bottom-right-radius: 600px 240px;
   padding-bottom: 120px;
   position: relative;
@@ -29,7 +29,7 @@ body {
     margin-top: -2px; }
 
 .header-wrap {
-  width: 33%;
+  width: 400px;
   padding-left: 90px; }
   .header-wrap .header_heading {
     font-size: 52px;
@@ -70,6 +70,9 @@ body {
 .section, .landing-logo span, .section .section_card_wrap .section_card .section_card_right_container .section_card_heading {
   text-align: center; }
   .section .section_text, .landing-logo span .section_text, .section .section_card_wrap .section_card .section_card_right_container .section_card_heading .section_text {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 27px;
     color: #2C2F3C;
     font-size: 28px;
     font-weight: 600;
@@ -81,7 +84,7 @@ body {
       height: 32px;
       background-color: #14A0C7;
       position: absolute;
-      left: 680px;
+      left: 179px;
       bottom: 6px;
       z-index: -1; }
   .section .section_card_wrap, .landing-logo span .section_card_wrap, .section .section_card_wrap .section_card .section_card_right_container .section_card_heading .section_card_wrap {
