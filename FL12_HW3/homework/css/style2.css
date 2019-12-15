@@ -85,18 +85,21 @@ body {
       bottom: 6px;
       z-index: -1; }
   .section .section_card_wrap, .landing-logo span .section_card_wrap, .section .section_card_wrap .section_card .section_card_right_container .section_card_heading .section_card_wrap {
-    width: 820px;
+    width: 810px;
     margin: 0 auto; }
     .section .section_card_wrap .section_card, .landing-logo span .section_card_wrap .section_card, .section .section_card_wrap .section_card .section_card_right_container .section_card_heading .section_card_wrap .section_card {
       display: flex;
-      padding: 14px;
+      align-items: center;
+      padding: 0;
       background-color: #3B3F50;
       margin: 18px;
       color: #FEFFFF;
       border-radius: 5px; }
       .section .section_card_wrap .section_card .section_card_img, .landing-logo span .section_card_wrap .section_card .section_card_img, .section .section_card_wrap .section_card .section_card_right_container .section_card_heading .section_card_wrap .section_card .section_card_img {
         width: 100%;
-        border-radius: 3px; }
+        height: 100%;
+        border-radius: 3px;
+        margin: 10px; }
       .section .section_card_wrap .section_card .section_card_right_container, .landing-logo span .section_card_wrap .section_card .section_card_right_container, .section .section_card_wrap .section_card .section_card_right_container .section_card_heading .section_card_wrap .section_card .section_card_right_container {
         padding: 30px 30px 13px 30px;
         margin: 0 auto; }
@@ -173,3 +176,6 @@ body {
     .footer .footer-wrap .footer_text {
       width: 250px;
       font-family: "Fresca", sans-serif; }
+
+.mt-0 {
+  margin-top: 0; }
