@@ -45,7 +45,7 @@ p {
 
 .container {
   width: 90%;
-  min-width: 960px;
+  min-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
@@ -135,15 +135,25 @@ p {
 .card:nth-child(even) {
   flex-direction: row-reverse;
   text-align: right;
+  
 }
 
-
 .card img {
-  width: 455px;
+  width: 49%;
+}
+
+.card:hover img{
+  opacity: 0.8;
+}
+
+.card:hover .card_text_title, .card:hover .card_text_description{
+  opacity: 0.8;
 }
 
 .card_text {
-  padding: 15px 15px 25px 15px;
+  padding-right: 20px;
+  padding-left: 15px;
+  position: relative;
 }
 
 .card_text_title {
@@ -154,9 +164,59 @@ p {
   padding-right: 25px;
 }
 
+.card:nth-child(1) .card_text_title::after {
+  content: '07 \A mar';
+  white-space: pre; 
+  position: absolute;
+  opacity: 0.15;
+  top: -10px;
+  right: 10px;
+  font-size: 38px;
+}
+
+.card:nth-child(2) .card_text_title::after {
+  content: '06 \A mar';
+  white-space: pre; 
+  position: absolute;
+  opacity: 0.15;
+  top: -10px;
+  left: 10px;
+  font-size: 38px;
+}
+
+.card:nth-child(3) .card_text_title::after {
+  content: '04 \A mar';
+  white-space: pre; 
+  position: absolute;
+  opacity: 0.15;
+  top: -10px;
+  right: 10px;
+  font-size: 38px;
+}
+
+.card:nth-child(4) .card_text_title::after {
+  content: '01 \A mar';
+  white-space: pre; 
+  position: absolute;
+  opacity: 0.15;
+  top: -10px;
+  left: 10px;
+  font-size: 38px;
+}
+
+.bigCard .bigCard_text::after {
+  content: '27 \A feb';
+  white-space: pre; 
+  position: absolute;
+  opacity: 0.15;
+  top: 10px;
+  right: 15px;
+  font-size: 38px;
+}
+
 .card_text_description {
   padding-left: 25px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.7em;
   padding-right: 25px;
 }
@@ -164,10 +224,12 @@ p {
 .bigCard {
   padding-top: 30px;
   padding-bottom: 35px;
+  position: relative;
 }
 
 .bigCard_text {
   width: 820px;
+  
 }
 
 .card_text_title {
@@ -219,11 +281,6 @@ p {
   margin-bottom: 5px;
   line-height: 1.5em;
 }
-
-
-
-
-
 
 
 
