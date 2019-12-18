@@ -1,0 +1,307 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #024161;
+  --link: #fff;
+  --link--hover: #1f52a4;
+  --bg-footer-color: #024161;
+}
+
+body {
+  font-family: roboto;
+  box-sizing: border-box;
+}
+.post-1 {
+	background: #9d27b0;
+}
+.post-2 {
+	background: #9bb800;
+}
+.post-3 {
+	background: #ed5120;
+}
+.post-4 {
+	background: #9d27b0;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+/* Your styles go here */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color--dark);
+  color: rgb(231, 231, 231);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  min-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 1fr 280px;
+  grid-template-areas: 
+                        "nav nav"
+                        "header header"
+                        "main sidebar"
+                        "footer footer";
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.navigation {
+  grid-area: nav;
+  background-color: var(--bg-color--header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  letter-spacing: 1px;
+  padding-left: 15px;
+}
+
+.logo .blog {
+  color: #C02966;
+}
+
+.menu_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin-right: 40px;
+  height: 100%;
+}
+
+.menu_list li {
+  padding: 30px 0 30px 0;
+}
+
+.menu_list li:hover {
+  background-color: var(--link--hover);
+
+}
+
+.menu_list a{
+  color: var(--link);
+  text-decoration: none;
+  font-size: 17px;
+  padding: 30px;
+}
+
+.header {
+  grid-area: header;
+  background: url('../img/post0.jpg') no-repeat center 100% / cover;
+}
+
+.header_text {
+  width: 805px;
+  padding: 180px 0 50px 35px;
+}
+
+.header_text_title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.header_text_description {
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+.main {
+  grid-area: main;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+}
+
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+
+.card img {
+  width: 455px;
+}
+
+.card_text {
+  padding: 15px 15px 25px 15px;
+}
+
+.card_text_title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.card_text_description {
+  padding-left: 25px;
+  font-size: 16px;
+  line-height: 1.7em;
+  padding-right: 25px;
+}
+
+.bigCard {
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.bigCard_text {
+  width: 820px;
+}
+
+.card_text_title {
+  margin-top: 0;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  color: black;
+}
+
+.sidebar_card {
+  background-color: #fff;
+  padding-bottom: 35px;
+  margin-bottom: 20px;
+}
+
+.sidebar_card img {
+  width: 100%;
+}
+
+.sidebar_text {
+  width: 215px;
+  margin: 0 auto;
+}
+
+.sidebar_text_title {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+
+.sidebar_text_description {
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--bg-footer-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 25px 30px;
+  font-size: 14px;
+}
+
+.footer p {
+  margin-bottom: 5px;
+  line-height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+  .container {
+    grid-template-rows: 150px 1fr auto;
+    grid-template-columns:auto 1fr 250px;
+    grid-template-areas: 
+    "nav header header"
+    "nav main sidebar"
+    "nav footer footer";
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-rows: 150px 1fr auto auto;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+    "nav header"
+    "nav main"
+    "nav sidebar"
+    "nav footer";
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .container {
+    grid-template-rows: auto 150px 1fr auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "sidebar"
+    "footer";
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+  ul {
+    flex-direction: row;
+  }
+}
