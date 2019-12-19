@@ -424,7 +424,7 @@ p {
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 480px) {
   .container {
     grid-template-rows: auto auto 1fr auto auto;
     grid-template-columns: auto;
