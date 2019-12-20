@@ -2,13 +2,13 @@
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
-:root {
+/* :root {
   --bg-color--dark: #0b192f;
   --bg-color--header: #024161;
   --link: #fff;
   --link--hover: #1f52a4;
   --bg-footer-color: #024161;
-}
+} */
 
 body {
   font-family: roboto;
@@ -34,7 +34,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color--dark);
+  background-color: #0b192f;
   color: rgb(231, 231, 231);
 }
 
@@ -61,7 +61,7 @@ p {
 
 .navigation {
   grid-area: nav;
-  background-color: var(--bg-color--header);
+  background-color: #024161;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,12 +91,12 @@ p {
 }
 
 .menu_list li:hover {
-  background-color: var(--link--hover);
+  background-color: #1f52a4;
 
 }
 
 .menu_list a{
-  color: var(--link);
+  color: #fff;
   text-decoration: none;
   font-size: 17px;
   padding: 30px;
@@ -130,6 +130,7 @@ p {
 .card {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .card:nth-child(even) {
@@ -151,9 +152,9 @@ p {
 }
 
 .card_text {
-  padding-right: 20px;
-  padding-left: 15px;
-  position: relative;
+  /* padding-right: 20px; */
+  /* padding-left: 15px; */
+  
 }
 
 .card_text_title {
@@ -164,44 +165,22 @@ p {
   padding-right: 25px;
 }
 
-.card:nth-child(1) .card_text_title::after {
-  content: '07 \A mar';
-  white-space: pre; 
+
+.date {
+  white-space: pre;
   position: absolute;
   opacity: 0.15;
-  top: -10px;
+  font-size: 35px;
+  top: -15px;
   right: 10px;
-  font-size: 38px;
+  text-align: center;
 }
 
-.card:nth-child(2) .card_text_title::after {
-  content: '06 \A mar';
-  white-space: pre; 
-  position: absolute;
-  opacity: 0.15;
-  top: -10px;
-  left: 10px;
-  font-size: 38px;
-}
-
-.card:nth-child(3) .card_text_title::after {
-  content: '04 \A mar';
-  white-space: pre; 
-  position: absolute;
-  opacity: 0.15;
-  top: -10px;
-  right: 10px;
-  font-size: 38px;
-}
-
-.card:nth-child(4) .card_text_title::after {
-  content: '01 \A mar';
-  white-space: pre; 
-  position: absolute;
-  opacity: 0.15;
-  top: -10px;
-  left: 10px;
-  font-size: 38px;
+.card:nth-child(even) .date {
+  left: -79px;
+  top: -15px;
+  display: block;
+  width: 100px;
 }
 
 .bigCard .bigCard_text::after {
@@ -212,7 +191,7 @@ p {
   top: 10px;
   right: 15px;
   font-size: 38px;
-}
+} 
 
 .card_text_description {
   padding-left: 25px;
@@ -272,7 +251,7 @@ p {
 
 .footer {
   grid-area: footer;
-  background-color: var(--bg-footer-color);
+  background-color: #024161;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -297,7 +276,9 @@ p {
   margin: 6px 0;
 }
 
-
+.bigCard_date {
+  display: none;
+}
 
 
 
@@ -384,16 +365,13 @@ p {
     font-size: 38px;
   }
 
-  .bigCard .date {
-    display: block;
-    
-  }
 
   .bigCard_date {
-    font-size: 4em;
+    font-size: 3em;
     opacity: 0.15;
     text-align: center;
     padding: 45px;
+    display: block;
   }
 
   .menu {
@@ -422,6 +400,18 @@ p {
   .h-550 {
     height: 550px!important;
   }
+
+  .date {
+    top: 600px;
+    right: 30px;
+    font-size: 2.5em;
+  }
+
+  .card:nth-child(even) .date {
+    top: 575px;
+    left: 710px;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
