@@ -3,9 +3,9 @@ let b = prompt('Enter the second value:');
 let c = prompt('Enter the third value:');
 
 
-if (a.length === 0 || isNaN(a) || b.length === 0 || isNaN(b) || (c.length === 0 || isNaN(c))) {
+if (isNaN(a) || isNaN(b) || isNaN(c)) {
     alert('input values should be ONLY numbers ');
-} else if (+a === 0 || +b === 0 || +c === 0) {
+} else if (+a <= 0 || +b <= 0 || +c <= 0) {
     alert('A triangle must have 3 sides with a positive definite length')
 } else if(!(+a + +b > +c && +a + +c > +b && +c + +b > +a)) {
     alert('Triangle doesn’t exist');
