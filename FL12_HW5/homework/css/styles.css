@@ -128,15 +128,15 @@ p {
   width: 49%;
 }
 
-.card:hover img{
+.card img:hover {
   opacity: 0.8;
 }
 
-.card:hover .card_text_title, .card:hover .card_text_description{
+.card_text:hover .card_text_title {
   opacity: 0.8;
 }
 
-.bigCard:hover {
+.bigCard:hover .card_text_title{
   opacity: 0.8;
 }
 
@@ -216,7 +216,7 @@ p {
 }
 
 .sidebar_text {
-  width: 215px;
+  width: 214px;
   margin: 0 auto;
 }
 
