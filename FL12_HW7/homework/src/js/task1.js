@@ -1,17 +1,14 @@
-let userEmail = prompt('Enter your email');
-let password;
-let EmailValidLen = 5;
-
 let database = {
     'user@gmail.com': 'UserPass',
     'admin@gmail.com': 'AdminPass'
 }
-
+let password;
 let changePassword;
 let newPassword;
 let newPassword2;
+let EmailValidLen = 5;
 let newPasswordValidLen = 6;
-
+let userEmail = prompt('Enter your email');
 
 if (!userEmail) {
     //If the userEmail is an empty line or Esc 
@@ -68,12 +65,9 @@ if (!userEmail) {
             //if change password has canceled
             alert('You have failed the change.');
         }
-
         console.log(database);
     }
 } else {
     //If the visitor has entered an email address that is not in the database
     alert('I don’t know you');
 }
-
-
