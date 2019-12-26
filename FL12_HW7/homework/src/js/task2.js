@@ -24,7 +24,7 @@ if (!play) {
     while (userAttempts > 0) {
         console.log(`Random Number: ${randomNum}`);
         userChoice = +prompt(`
-        Choose a roulette pocket pocket number from 0 to ${randomNumRange}
+        Choose a roulette pocket number from 0 to ${randomNumRange}
         Attempts left: ${userAttempts}
         Total prize: ${userPrize}$
         Possible prize: ${prize}$
@@ -53,29 +53,32 @@ if (!play) {
                 play = confirm(`Thank you for your participation. Your prize is: ${userPrize}$.\n
                 Do you want to play again?`);
                 if (play) {
+                    //if user wanted to play again
                     prize = firstLevelPrize;
                     userAttempts = numOfUserAttempts;
                     userPrize = 0;
                     randomNumRange = firstLevelRange;
                     randomNum = Math.floor(Math.random() * (randomNumRange + 1)); 
                 } else {
+                    //if user didn't want to play again
                     break;
                 }
             }
         }
         
         if (userAttempts === 0) {
-            //if user didn't guess a number
+            //if the user has not guessed the number and he has no more attempts
             play = confirm(`Thank you for your participation. Your prize is: ${userPrize}$.\n
             Do you want to play again?`);
             if (play) {
-                //if user want to play again
+                //if user wanted to play again
                 userAttempts = numOfUserAttempts;
                 randomNumRange = firstLevelRange;
                 prize = firstLevelPrize;
                 userPrize = 0;
                 randomNum = Math.floor(Math.random() * (randomNumRange + 1));
             } else {
+                //if user didn't want to play again
                 break;
             }
         }
