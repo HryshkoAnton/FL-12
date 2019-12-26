@@ -1,13 +1,8 @@
 function countNumbers(str) {
     let result = {};
-    let strOfNums = str.split('').filter(a => !isNaN(a)).sort((a,b) => a-b).join('');
-    for (let i=0; i<strOfNums.length; i++) {
-      let currentNum = strOfNums[i];
-      if (!Object.keys(result).includes(currentNum)) {
-        result[currentNum] = 1;
-      } else {
-        result[currentNum] +=1;
-      }
-    }
+    let strOfNums = str.split('').filter(a => !isNaN(a)).sort((a,b) => a-b);
+    strOfNums.forEach(num => {
+      Object.keys(result).includes(num) ? result[num] +=1 : result[num] = 1;
+    });
     return result;
 }
