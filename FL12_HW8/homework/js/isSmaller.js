@@ -1,3 +1,3 @@
-function isSmaller(a, b) {
-    return a < b;
-}
+let isSmaller = (a, b) => a < b;
+
+isSmaller(5, -1);

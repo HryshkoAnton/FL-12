@@ -6,3 +6,5 @@ function countNumbers(str) {
     });
     return result;
 }
+
+countNumbers('erer384jj4444666888jfd123');
