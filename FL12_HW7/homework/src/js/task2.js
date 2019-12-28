@@ -3,7 +3,7 @@ let userChoice;
 let userAttempts;
 let prize;
 let userPrize;
-let randomNumRange = 8;
+let randomNumRange;
 let numOfUserAttempts = 3;
 let firstLevelPrize = 100;
 let secondLevelPrize = 200;
@@ -17,27 +17,24 @@ if (!play) {
     alert('You did not become a billionaire, but can.');
 } else {
     //If user clicked 'OK' button
+    randomNumRange = firstLevelRange;
     randomNum = Math.floor(Math.random() * (randomNumRange + 1));
     userAttempts = numOfUserAttempts;
     userPrize = 0;
     prize = firstLevelPrize;
     while (userAttempts > 0) {
-        console.log(`Random Number: ${randomNum}`);
-        userChoice = +prompt(`
+        userChoice = prompt(`
         Choose a roulette pocket number from 0 to ${randomNumRange}
         Attempts left: ${userAttempts}
         Total prize: ${userPrize}$
         Possible prize: ${prize}$
         Enter your number`
         );
-        console.log(`User Choice: ${userChoice}`);
 
-        if (userChoice !== randomNum) {
+        if (+userChoice !== randomNum || userChoice === null || userChoice.length === 0) {
             //if user didn't guess the number
             userAttempts--;
             prize /= lowerThePrize;
-            console.log('Did not guess');
-            console.log(userAttempts);
         } else {
             //if user guessed the number
             userPrize += prize;

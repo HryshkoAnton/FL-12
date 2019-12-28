@@ -29,7 +29,6 @@ if (!userEmail) {
         //if password is correct
         //Suggest user/admin to change his password 
         changePassword = confirm('Do you want to change your password?');
-
         if (changePassword) {
             // If user clicked ‘Ok’(change password)
             password = prompt('Enter the old password');
@@ -65,7 +64,6 @@ if (!userEmail) {
             //if change password has canceled
             alert('You have failed the change.');
         }
-        console.log(database);
     }
 } else {
     //If the visitor has entered an email address that is not in the database
