@@ -1,15 +1,11 @@
-function isLeapYear(date) {
-    let year = new Date(date);
-    if (!isNaN(year)) {
-        year = year.getFullYear();
-        if ( ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0) ) {
-            return `${year} is a leap year`;
-        } else {
-            return `${year} is not a leap year`;
-        }
-    } else {
-        return year;
+function isLeapYear(str) {
+    let date = new Date(str);
+    if (isNaN(date)) {
+      return 'Invalid Date';
     }
-}
+    let year = date.getFullYear();
+    let leapYear = new Date(year, 1, 29).getDate() === 29;
+    return leapYear ? `${year} is a leap year` : `${year} is not a leap year`;
+  }
 
 isLeapYear('2020-01-01 00:00:00');
