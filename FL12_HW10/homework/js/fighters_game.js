@@ -66,10 +66,9 @@ class Fighter {
   }
   
 function battle(fighter1, fighter2) {
-    if (!fighter1.getHealth()) {
-        console.log(`${fighter1.getName()} is dead and can't fight`);
-        return;
-    } else if (!fighter2.getHealth()) {
+    if (!fighter1.getHealth() || !fighter2.getHealth()) {
+        !fighter1.getHealth() ? 
+        console.log(`${fighter1.getName()} is dead and can't fight`) : 
         console.log(`${fighter2.getName()} is dead and can't fight`);
         return;
     }
