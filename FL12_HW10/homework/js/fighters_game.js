@@ -85,19 +85,5 @@ function battle(fighter1, fighter2) {
     console.log(`${winner.getName()} has won!`);
 }
   
-//   const myFighter1 = new Fighter({name: 'Maximus', damage: 25, hp: 100, strength: 30, agility: 25});
-//   const myFighter2 = new Fighter({name: 'Commodus', damage: 20, hp: 100, strength: 15, agility: 10});
-  
-//   console.log('Start Battle!');
-//   battle(myFighter1, myFighter2);
-//   console.log(`Maximus: ${myFighter1.getHealth()}`);
-//   console.log(`Commodus: ${myFighter2.getHealth()}`);
-  
-//   console.log('Start Battle!');
-//   battle(myFighter1, myFighter2);
-//   myFighter1.heal(50);
-//   myFighter2.heal(50);
-//   console.log(`Maximus: ${myFighter1.getHealth()}`);
-//   console.log(`Commodus: ${myFighter2.getHealth()}`);
-//   myFighter1.logCombatHistory();
-//   myFighter2.logCombatHistory();
+const myFighter1 = new Fighter({name: 'Maximus', damage: 25, hp: 100, strength: 30, agility: 25});
+const myFighter2 = new Fighter({name: 'Commodus', damage: 20, hp: 100, strength: 15, agility: 10});
