@@ -30,9 +30,9 @@ class Fighter {
     }
   
     attack(defender) {
-        let hundredPercent = 100;
-        let success = Math.random();
-        let defense = 1 - (defender.getStrength() + defender.getAgility()) / hundredPercent;
+        const hundredPercent = 100;
+        const success = Math.random();
+        const defense = 1 - (defender.getStrength() + defender.getAgility()) / hundredPercent;
         if (success > defense) {
             defender.dealDamage(this.getDamage());
             console.log(`${this.getName()} makes ${this.getDamage()} damage to ${defender.getName()}`);
@@ -46,13 +46,13 @@ class Fighter {
     }
   
     heal(healPoints) {
-        let maxHealth = 100;
-        let healedHealth = this._hp += healPoints;
+        const maxHealth = 100;
+        const healedHealth = this._hp += healPoints;
         this._hp = healedHealth > maxHealth ? maxHealth : healedHealth;
     }
   
     dealDamage(dealPoints) {
-        let dealedHealth = this._hp -= dealPoints;
+        const dealedHealth = this._hp -= dealPoints;
         this._hp = dealedHealth < 0 ? 0 : dealedHealth;
     }
   
